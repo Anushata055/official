@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lan ="en">
+  <head>
+              <meta charset="UtF-8">
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+              <meta name="viewport" content="width=device-width,initial-scale=1.0">
+              <title>
+                  Buildcon
+              </title>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+              <link rel="stylesheet" href="style.css">
+              </head>
+              <body>
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                      <div class="container">
+                        <a class="navbar-brand" href="#"><span class="text-warning">Build</span>Con</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <!-- <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li> -->
+                            <li class="nav-item">
+                              <a class="nav-link" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#services">Services</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                              <a class="nav-link" href="#portfolio">Portfolio</a>
+                            </li> -->
+                            <li class="nav-item">
+                              <a class="nav-link" href="#contact">contact</a>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              </ul>
+                            </li> -->
+                            <!-- <li class="nav-item">
+                              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li> -->
+                          </ul>
+                          <!-- <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                          </form> -->
+                        </div>
+                      </div>
+                    </nav>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="...">
+                        <div class="carousel-caption ">
+                          <h5>Your Dream House</h5>
+                          <p>We make a trust </p>
+                          <p><a href="#" class="btn btn-warning mt-3">Lern More</a></p>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="data:image/png;base64,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" class="d-block w-100" alt="...">
+                          <div class="carousel-caption ">
+                            <h5>Always Dedicated</h5>
+                            <p>good results </p>
+                            <p><a href="#" class="btn btn-warning mt-3">Lern More</a></p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbTGWnADS-iYHrvrCjM5BmmJ4RIDr_mx0Xg&usqp=CAU" class="d-block w-100" alt="...">
+                          <div class="carousel-caption ">
+                            <h5>True construction</h5>
+                            <p>good results </p>
+                            <p><a href="#" class="btn btn-warning mt-3">Lern More</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                    <!---about section--->
+                    <section id="about" class="about-section-padding">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-4 col-md-12 ccol-12">
+                            <div class="about-img">
+                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIyC8FZR9Mc_jeIphgNLMmZVaIq2p13NGh1Q&usqp=CAU" alt="" class="img-fluid">
+                            </div>
+                          </div>
+                          <div class="col-lg-8 col-md-12 ps-lg-5 mt-md-5">
+                            <div class="about-text">
+                              <h2>We provide best quality<br>Services ever</h2>
+                              <p>They have a deep understanding of the construction process, codes, regulations, and can ensure that your home is built following all necessary guidelines.</p>
+                              <a href="#" class="btn btn-warning">Lern More</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <!---service section--->
+                  <section id="services" class="services.section-padding">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                         <div class="section-header text-center pb-5">
+                          <h2>Our services</h2>
+                          <p>They have a deep understanding of the construction process, codes, regulations, and can ensure that your home is built following all necessary guidelines. A professional builder has a network of reliable and skilled subcontractors, ensuring that the project is completed efficiently and to the highest quality.</p>
+                         </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-md-12 col-lg-4">
+                          <div class="card text-white text-center bg-dark pb-2">
+                            <div class="card-body">
+                              <i class="bi bi-subtract"></i>
+                              <h3 class="card-title">Best Quality</h3>
+                              <p class="lead">The process of constructing a house is a long and drawn-out process. The exact time needed for house construction depends on many factors, such as the size of the house, availability of materials, the efficiency of the construction labour, etc. However, it can take anywhere from several months to a year to complete the construction.</p>
+                            <button class="btn btn-warning text-dark">Read more</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4">
+                          <div class="card text-white text-center bg-dark pb-2">
+                            <div class="card-body">
+                              <i class="bi bi-subtract"></i>
+                              <h3 class="card-title">Best Quality</h3>
+                              <p class="lead">The process of constructing a house is a long and drawn-out process. The exact time needed for house construction depends on many factors, such as the size of the house, availability of materials, the efficiency of the construction labour, etc. However, it can take anywhere from several months to a year to complete the construction.</p>
+                            <button class="btn btn-warning text-dark">Read more</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4">
+                          <div class="card text-white text-center bg-dark pb-2">
+                            <div class="card-body">
+                              <i class="bi bi-subtract"></i>
+                              <h3 class="card-title">Best Quality</h3>
+                              <p class="lead">The process of constructing a house is a long and drawn-out process. The exact time needed for house construction depends on many factors, such as the size of the house, availability of materials, the efficiency of the construction labour, etc. However, it can take anywhere from several months to a year to complete the construction.</p>
+                            <button class="btn btn-warning text-dark">Read more</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    
+                  </section>
+                  <!--contact section-->
+                  <section id="contact"class="contact section-padding">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="section-header text-center pb-5">
+                            <h2>Contact us</h2>
+                            <p>The process of constructing a house is a long and drawn-out process. </p>
+                          
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row m-0">
+                        <div class="col-md-12 p-0 pt-4 p-4 m-auto">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="mb-3">
+                                <input type="text" class="form-control" required placeholder="your full name">
+
+
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="mb-3">
+                                <input type="email" class="form-control" required placeholder="your emailhere">
+
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="mb-3">
+                            <textarea rows="3" required class="form-control" placeholder="your Query"></textarea>
+                      </div>
+                    </div>
+                    <button class="btn btn-warning btn-lg btn-block mt-3">Send now</button>
+                  </div>
+                  </div>
+                        </div>
+                    </div>
+                  </section>
+                  <!---footer-->
+                  <footer class="bg-dark p-2 text-center">
+                    <div class="container">
+                    <p class="text-white">All right reserved @website</p>
+                    </div> 
+                    </footer>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+              </body>
+          </html>
